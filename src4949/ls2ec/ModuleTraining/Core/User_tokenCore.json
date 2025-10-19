@@ -1,0 +1,1 @@
+{"name":"user_token","attribut":{"1":{"name":"date","datatype":"datetime","nullable":"default","formtype":"date"},"2":{"name":"quantite","datatype":"integer","nullable":"not","formtype":"integer"}},"relation":[{"entity":"user","name":"user","cardinality":"manyToOne"},{"entity":"packtokken","name":"packtokken","cardinality":"manyToOne"}]}

@@ -1,0 +1,13 @@
+     ALTER TABLE courses ADD name_en VARCHAR(255) NOT NULL, ADD description_en LONGTEXT NOT NULL;
+     CREATE TABLE subscription (id INT AUTO_INCREMENT NOT NULL, user_subscription_id INT DEFAULT NULL, name VARCHAR(255) NOT NULL, description VARCHAR(255) DEFAULT NULL, price INT NOT NULL, created_at DATETIME DEFAULT NULL, updated_at DATETIME DEFAULT NULL, deleted_at DATETIME DEFAULT NULL, INDEX IDX_A3C664D388C4EB53 (user_subscription_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE `utf8_unicode_ci` ENGINE = InnoDB;
+     CREATE TABLE user_subscription (id INT AUTO_INCREMENT NOT NULL, user_id INT DEFAULT NULL, start_date VARCHAR(255) DEFAULT NULL, duration INT DEFAULT NULL, created_at DATETIME DEFAULT NULL, updated_at DATETIME DEFAULT NULL, deleted_at DATETIME DEFAULT NULL, INDEX IDX_230A18D1A76ED395 (user_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE `utf8_unicode_ci` ENGINE = InnoDB;
+     ALTER TABLE subscription ADD CONSTRAINT FK_A3C664D388C4EB53 FOREIGN KEY (user_subscription_id) REFERENCES user_subscription (id);
+     ALTER TABLE user_subscription ADD CONSTRAINT FK_230A18D1A76ED395 FOREIGN KEY (user_id) REFERENCES user (id);
+     ALTER TABLE subscription DROP FOREIGN KEY FK_A3C664D388C4EB53;
+     DROP INDEX IDX_A3C664D388C4EB53 ON subscription;
+     ALTER TABLE subscription DROP user_subscription_id;
+     ALTER TABLE user_subscription ADD subscription_id INT DEFAULT NULL;
+     ALTER TABLE user_subscription ADD CONSTRAINT FK_230A18D19A1887DC FOREIGN KEY (subscription_id) REFERENCES subscription (id);
+     CREATE INDEX IDX_230A18D19A1887DC ON user_subscription (subscription_id);
+     ALTER TABLE subscription ADD m_price INT NOT NULL, ADD targer VARCHAR(255) DEFAULT NULL, CHANGE price y_price INT NOT NULL;
+     ALTER TABLE subscription CHANGE targer target VARCHAR(255) DEFAULT NULL;

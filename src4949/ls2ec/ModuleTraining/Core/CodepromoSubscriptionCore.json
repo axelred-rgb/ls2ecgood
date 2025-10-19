@@ -1,0 +1,1 @@
+{"name":"codepromosubscription","attribut":[],"relation":[{"entity":"subscription","name":"subscription","cardinality":"manyToOne"},{"entity":"codepromo","name":"codepromo","cardinality":"manyToOne"}]}

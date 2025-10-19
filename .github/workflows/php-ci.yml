@@ -1,0 +1,39 @@
+name: PHP CI - Devups
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Checkout del codice
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2️⃣ Setup di PHP
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          extensions: mbstring, xml, ctype, json, pdo, sqlite, curl, dom
+          coverage: none
+
+      # 3️⃣ Installa Composer
+      - name: Install dependencies
+        run: composer install --no-interaction --prefer-dist --optimize-autoloader
+
+      # 4️⃣ Installa Devups framework
+      - name: Setup Devups
+        run: |
+          php devups install
+          php devups dvups_:update
+
+      # 5️⃣ Esegui eventuali test
+      - name: Run PHP tests (optional)
+        run: |
+          if [ -f vendor/bin/phpunit ]; then vendor/bin/phpunit; fi

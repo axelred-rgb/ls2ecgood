@@ -1,0 +1,519 @@
+<?php $__env->startSection('content'); ?>
+
+    <section class="bg-img pt-200 pb-120" data-overlay="7" style="background-image: url(<?php echo e(assets); ?>images/front-end-img/banners/banner-1.jpg); background-position: top center;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-center mt-80">
+                        <h1 class="box-title text-white mb-30"><?php echo tt("LS2EC TRAINING - L'Expertise c'est notre garantie"); ?></h1>
+                        <br>
+                        <br>
+                    </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                            <div class="box box-body p-xl-50 p-30 bg-lightest">
+                                <div class="row align-items-center">
+                                    <div class="col-12">
+                                        <h1 class="mb-15"><?php echo tt("Aux entreprises"); ?></h1>
+                                        <h4 class="fw-400"><?php echo tt("votre transformation digitale vous tient-elle à cœur dans
+                                            les domaines des réseaux, sécurité, cybersécurité, cloud, devops ?"); ?></h4>
+                                        <br>
+                                        <h4 class="fw-400"><?php echo tt("LS2EC TRAINING est la solution pour booster votre notoriété auprès de vos clients,
+                                            consolider votre avantage compétitif durable et booster votre rentabilité."); ?></h4>
+                                        <br>
+                                        <a href="<?php echo e(route('enterprise')); ?>" class="btn btn-outline btn-primary"><?php echo tt("More info..."); ?></a>
+                                    </div>
+
+
+
+                                </div>
+                        </div>
+                    </div>
+                <div class="col-md-6 col-12">
+                        <div class="box box-body p-xl-50 p-30 bg-lightest">
+                            <div class="row align-items-center">
+                                <div class="col-12">
+                                    <h1 class="mb-15"><?php echo tt("Aux Particuliers"); ?></h1>
+                                    <h4 class="fw-400"><?php echo tt("Technicien(ne)s et ingénieur(e)s réseaux, sécurité, cybersécurité, cloud, devops,
+                                        votre degré de confiance à vos entretiens d’embauche vous tient-il à cœur ?"); ?></h4>
+                                    <br>
+                                    <h4 class="fw-400"><?php echo tt("LS2EC TRAINING est la solution qui vous garantit l’excellence pour que désormais
+                                        vos entretiens soient une simple formalité."); ?></h4>
+                                    <br>
+                                    <a href="<?php echo e(route('individual')); ?>" class="btn btn-outline btn-primary"><?php echo tt("More info..."); ?></a>
+                                </div>
+
+
+
+                            </div>
+                    </div>
+                </div>
+
+
+                </div>
+
+        </div>
+    </section>
+
+    <section class="py-50 bg-white" data-aos="fade-up">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-12 text-center">
+                    <h1 class="mb-15"><?php echo tt("Our training subjects"); ?></h1>
+                    <hr class="w-100 bg-primary">
+                </div>
+            </div>
+            <div class="row mt-30">
+
+                <?php $__currentLoopData = App::$academies; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $academy): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <a class="box bg-img text-center py-50 pull-up" href="javascript:void(0)" style="background-image: url(<?php echo e(assets); ?>images/front-end-img/courses/<?php echo e($academy->getBanner()); ?>)">
+
+                            <div class="box-body py-15 bg-black-70 rounded-0">
+                                <h4 class="text-white"><?php echo e($academy->getName()); ?></h4>
+                            </div>
+                        </a>
+                    </div>
+
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-30 bg-img countnm-bx" data-jarallax='{"speed": 0.4}' style="background-image: url(<?php echo e(assets); ?>images/front-end-img/background/bg-1.jpg)" data-overlay="5">
+        <div class="container">
+            <div class="box box-body bg-transparent mb-0">
+                <div class="row">
+                    <div class="col-lg-3 col-6">
+                        <div class="text-center mb-30 mb-lg-0">
+                            <div class="w-80 h-80 l-h-100 rounded-circle b-1 border-white text-center mx-auto">
+                                <span class="text-white fs-40 icon-User"><span class="path1"></span><span class="path2"></span></span>
+                            </div>
+                            <h1 class="countnm my-10 text-white">01</h1>
+                            <div class="text-uppercase text-white"><?php echo tt("Years"); ?></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <div class="text-center mb-30 mb-lg-0">
+                            <div class="w-80 h-80 l-h-100 rounded-circle b-1 border-white text-center mx-auto">
+                                <span class="text-white fs-40 icon-Book"></span>
+                            </div>
+                            <h1 class="countnm my-10 text-white">05</h1>
+                            <div class="text-uppercase text-white"><?php echo tt("Courses"); ?></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <div class="text-center">
+                            <div class="w-80 h-80 l-h-100 rounded-circle b-1 border-white text-center mx-auto">
+                                <span class="text-white fs-40 icon-Group"><span class="path1"></span><span class="path2"></span></span>
+                            </div>
+                            <h1 class="countnm my-10 text-white">01</h1>
+                            <div class="text-uppercase text-white"><?php echo tt("Student"); ?></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <div class="text-center">
+                            <div class="w-80 h-80 l-h-100 rounded-circle b-1 border-white text-center mx-auto">
+                                <span class="text-white fs-40 icon-Difference"><span class="path1"></span><span class="path2"></span></span>
+                            </div>
+                            <h1 class="countnm my-10 text-white">03</h1>
+                            <div class="text-uppercase text-white"><?php echo tt("partners"); ?></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-50" data-aos="fade-up">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-12 text-center">
+                    <h1 class="mb-15"><?php echo tt("Upcoming Courses"); ?></h1>
+                    <hr class="w-100 bg-primary">
+                </div>
+            </div>
+            <div class="row mt-30">
+                <div class="col-12">
+                    <ul class="nav nav-tabs justify-content-center bb-0 mb-10" role="tablist">
+                        <?php $__currentLoopData = App::$academies; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $academy): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <?php if($academy->getId()==1): ?>
+                            <li class="nav-item"> <a class="nav-link active" data-bs-toggle="tab" href="#tab<?php echo e($academy->getId()); ?>" role="tab"><?php echo e($academy->getName()); ?></a> </li>
+                            <?php else: ?>
+                                <li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#tab<?php echo e($academy->getId()); ?>" role="tab"><?php echo e($academy->getName()); ?></a> </li>
+                            <?php endif; ?>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    </ul>
+                    <div class="tab-content">
+                        <?php $__currentLoopData = App::$academies; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $academy): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <?php if($academy->getId()==1): ?>
+                                <div class="tab-pane active" id="tab<?php echo e($academy->getId()); ?>" role="tabpanel">
+                                    <div class="px-15 pt-15">
+                                        <div class="row">
+                                            <?php $__currentLoopData = Courses::where($academy)->__getAll(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $course): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <div onclick="location.href='<?php echo e(route('coursedetail')); ?>?id=<?php echo e($course->getId()); ?>';" class="col-lg-3 col-md-6 col-12">
+                                                    <div class="card">
+                                                        <a href="#">
+                                                            <img class="card-img-top" src="<?php echo e(assets); ?>images/front-end-img/courses/<?php echo e($course->getImage()); ?>" alt="Card image cap">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <span class="badge badge-success mb-10"><?php echo e($academy->getName()); ?></span>
+                                                            <h4 class="card-title"><?php echo e($course->getName()); ?></h4>
+                                                            <div class="d-flex justify-content-between">
+                                                                <a href="#"><span class="fw-bold"><?php echo tt("Duration"); ?>:</span> 6 <?php echo tt("Months"); ?></a>
+                                                                <a href="#"><span class="fw-bold"><?php echo tt("Daily"); ?>:</span> 2 <?php echo tt("Hours"); ?></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php else: ?>
+                                <div class="tab-pane" id="tab<?php echo e($academy->getId()); ?>" role="tabpanel">
+                                    <div class="px-15 pt-15">
+                                        <div class="row">
+                                            <?php $__currentLoopData = Courses::where($academy)->__getAll(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $course): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <div onclick="location.href='<?php echo e(route('coursedetail')); ?>?id=<?php echo e($course->getId()); ?>';" class="col-lg-3 col-md-6 col-12">
+                                                    <div class="card">
+                                                        <a href="#">
+                                                            <img class="card-img-top" src="<?php echo e(assets); ?>images/front-end-img/courses/<?php echo e($course->getImage()); ?>" alt="Card image cap">
+                                                        </a>
+                                                        <div class="card-body">
+                                                            <span class="badge badge-success mb-10"><?php echo e($academy->getName()); ?></span>
+                                                            <h4 class="card-title"><?php echo e($course->getName()); ?></h4>
+                                                            <div class="d-flex justify-content-between">
+                                                                <a href="#"><span class="fw-bold"><?php echo tt("Duration"); ?>:</span> 6 <?php echo tt("Months"); ?></a>
+                                                                <a href="#"><span class="fw-bold"><?php echo tt("Daily"); ?>:</span> 2 <?php echo tt("Hours"); ?></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="py-50 bg-white" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2><?php echo tt("Recommandations"); ?></h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="owl-carousel owl-theme owl-loaded owl-drag" data-nav-arrow="true" data-nav-dots="false" data-items="2" data-md-items="2" data-sm-items="2" data-xs-items="1" data-xx-items="1">
+                <div class="owl-stage-outer">
+                    <div class="owl-stage" style="transform: translate3d(-2638px, 0px, 0px); transition: all 0.25s ease 0s; width: 5276px;">
+
+                        <div class="owl-item" style="width: 639.5px; margin-right: 20px;">
+                            <div class="item">
+                                <div class="testimonial-bx">
+                                    <div class="testimonial-thumb">
+                                        <img src="<?php echo e(assets); ?>images/avatar/5.jpg" alt="">
+                                    </div>
+                                    <div class="testimonial-info">
+                                        <h4 class="name">Brice Njonga</h4>
+                                        <p>Operation Core Voice Network engineer chez Hub One</p>
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <p class="fs-16">J'ai rarement rencontré un collègue aussi professionnel et passionné par son métier. Je reste admiratif devant son implication professionnelle, son veritable sens de la pédagogie et sa facilité pour transmettre son savoir à ceux qui l'entoure. J'espère qu'on aura l'occasion de travailler ensemble de nouveaux.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="width: 639.5px; margin-right: 20px;">
+                            <div class="item">
+                                <div class="testimonial-bx">
+                                    <div class="testimonial-thumb">
+                                        <img src="<?php echo e(assets); ?>images/avatar/2.jpg" alt="">
+                                    </div>
+                                    <div class="testimonial-info">
+                                        <h4 class="name">Alexia CATALOGNA</h4>
+                                        <p>Ingénieure Réseaux et Sécurité chez Hub One</p>
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <p class="fs-16">Travailler avec Claude-Marcel c'est apprendre chaque jour, il m'a aidé à grandir professionnellement et je le remercie grandement pour ça. Merci pour ta pédagogie, ta patience et ton professionnalisme</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="width: 639.5px; margin-right: 20px;">
+                            <div class="item">
+                                <div class="testimonial-bx">
+                                    <div class="testimonial-thumb">
+                                        <img src="<?php echo e(assets); ?>images/avatar/5.jpg" alt="">
+                                    </div>
+                                    <div class="testimonial-info">
+                                        <h4 class="name">Thomas Scainelli</h4>
+                                        <p>ingénieur réseau et sécurité chez Hub One</p>
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <p class="fs-16">Claude Marcel a été un collègue avec lequel j'ai pu apprendre beaucoup de chose et augmenter mon expertise technique. Il a toujours été patient et pédagogue lorsqu'il m'enseignait quelque chose, surtout avec des schémas clair et précis ! Merci a toi pour tout.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="width: 639.5px; margin-right: 20px;">
+                            <div class="item">
+                                <div class="testimonial-bx">
+                                    <div class="testimonial-thumb">
+                                        <img src="<?php echo e(assets); ?>images/avatar/2.jpg" alt="">
+                                    </div>
+                                    <div class="testimonial-info">
+                                        <h4 class="name">Soumaya Houari</h4>
+                                        <p>Responsable pôle Développement RH</p>
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <p class="fs-16">J'ai eu le plaisir de collaborer avec Claude Marcel principalement sur des sujets de formation. Avant tout, j'ai été impressionné par la capacité de Claude Marcel à se fixer des objectifs et se donner les moyens de les atteindre. Sa détermination a été un véritable atout dans son évolution au sein de Hub One, et j’en suis sûre va lui permettre de réussir dans son nouveau projet. Au-delà de sa détermination, c’est quelqu’un avec qui il est très facile d’échanger. Je lui souhaite pleine réussite dans son nouveau projet 😉</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="width: 639.5px; margin-right: 20px;">
+                            <div class="item">
+                                <div class="testimonial-bx">
+                                    <div class="testimonial-thumb">
+                                        <img src="<?php echo e(assets); ?>images/avatar/5.jpg" alt="">
+                                    </div>
+                                    <div class="testimonial-info">
+                                        <h4 class="name">Julien Lopez</h4>
+                                        <p>Team Leader Service Manager chez Hub One</p>
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <p class="fs-16">Je recommande fortement Claude Marcel pour vos activités Réseaux et Telecom. J'ai eu la chance de travailler avec lui pendant plusieurs années et peut attester de son professionnalisme et de sa motivation #réseau #sécurité #cybersécurité #cloud</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-nav">
+                    <div class="owl-prev">
+                        <i class="fa fa-angle-left fa-2x">
+
+                        </i>
+                    </div>
+                    <div class="owl-next">
+                        <i class="fa fa-angle-right fa-2x">
+
+                        </i>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="py-50">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-12 text-center">
+                    <h2 class="text-uppercase mb-15 fw-600"><?php echo tt("Our online Learning Plan"); ?><br> <span class="fw-400 fs-24"></span></h2>
+                    <h3 class="mb-15 fw-600"><span class="fw-400 fs-24"><?php echo tt("Paiement par CPF disponible en 2022"); ?></span></h3>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <ul class="nav nav-tabs justify-content-center bb-0 mb-10" role="tablist">
+                    <li class="nav-item"> <a class="nav-link active" data-bs-toggle="tab" href="#tableau1" role="tab"><?php echo tt("PARTICULIER"); ?></a> </li>
+                    <li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#tableau2" role="tab"><?php echo tt("ENTREPRISE"); ?></a> </li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tableau1" role="tabpanel">
+                    <div class="row mt-30">
+                        <?php $__currentLoopData = App::$subscription; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $subscriptions): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <?php if($subscriptions->getTarget()=="i"): ?>
+                                <div class="col-md-4 col-12">
+                                    <?php if($subscriptions->getY_price()==45): ?>
+                                        <div class="price-table active bg-gray-100 pull-up">
+                                            <?php else: ?>
+                                                <div class="price-table bg-gray-100">
+                                                    <?php endif; ?>
+
+                                                    <div class="price-top bg-white">
+                                                        <div class="price-title">
+                                                            <h3 class="mb-15"><?php echo e($subscriptions->getName()); ?></h3>
+                                                        </div>
+                                                        <div class="price-prize">
+                                                            <h2><?php echo e($subscriptions->getM_price()); ?> € /<span> <?php echo tt("month"); ?></span> <span><?php echo tt("or"); ?></span> <?php echo e($subscriptions->getY_price()); ?> € / <span><?php echo tt("year"); ?></span></h2>
+                                                        </div>
+                                                        <div class="price-button">
+                                                            <a class="btn btn-primary" href="<?php echo e(route('cart')); ?>?id=<?php echo e($subscriptions->getId()); ?>"><?php echo tt("Get It Now"); ?></a>
+                                                        </div>
+                                                    </div>
+                                                    <?php if($subscriptions->getName()=="Basic"): ?>
+                                                        <div class="price-content">
+                                                            <div class="price-table-list">
+                                                                <ul class="list-unstyled">
+                                                                    <li> <i class="fa fa-check"></i> <?php echo tt("CCNA 200-301"); ?> <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet" data-bs-original-title="" title=""><i class="fa fa-info"></i></span></li>
+                                                                    <li><i class="fa fa-times"  style="color: red;"></i> <?php echo tt("CCNP 350-401 ENCOR"); ?> <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet" data-bs-original-title="" title=""><i class="fa fa-info"></i></span> </li>
+                                                                    <li><i class="fa fa-check"></i> <?php echo tt("NSE4"); ?> <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet" data-bs-original-title="" title=""><i class="fa fa-info"></i></span> </li>
+                                                                    <li><i class="fa fa-times"  style="color: red;"></i> <?php echo tt("NSE7"); ?> <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet" data-bs-original-title="" title=""><i class="fa fa-info"></i></span> </li>
+                                                                    <li><i class="fa fa-times"  style="color: red;"></i> <?php echo tt("CYBERSECUTITY"); ?> <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet" data-bs-original-title="" title=""><i class="fa fa-info"></i></span> </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    <?php elseif($subscriptions->getName()=="Intermediate"): ?>
+                                                        <div class="price-content">
+                                                            <div class="price-table-list">
+                                                                <ul class="list-unstyled">
+                                                                    <li> <i class="fa fa-times" style="color: red;"></i> <?php echo tt("CCNA 200-301"); ?> <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet" data-bs-original-title="" title=""><i class="fa fa-info"></i></span></li>
+                                                                    <li><i class="fa fa-check"></i> <?php echo tt("CCNP 350-401 ENCOR"); ?> <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet" data-bs-original-title="" title=""><i class="fa fa-info"></i></span> </li>
+                                                                    <li><i class="fa fa-times" style="color: red;"></i> <?php echo tt("NSE4"); ?> <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet" data-bs-original-title="" title=""><i class="fa fa-info"></i></span> </li>
+                                                                    <li><i class="fa fa-check" ></i> <?php echo tt("NSE7"); ?> <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet" data-bs-original-title="" title=""><i class="fa fa-info"></i></span> </li>
+                                                                    <li><i class="fa fa-times"  style="color: red;"></i> <?php echo tt("CYBERSECUTITY"); ?> <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet" data-bs-original-title="" title=""><i class="fa fa-info"></i></span> </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    <?php else: ?>
+                                                        <div class="price-content">
+                                                            <div class="price-table-list">
+                                                                <ul class="list-unstyled">
+                                                                    <li> <i class="fa fa-check"></i> <?php echo tt("CCNA 200-301"); ?> <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet" data-bs-original-title="" title=""><i class="fa fa-info"></i></span></li>
+                                                                    <li><i class="fa fa-check" ></i> <?php echo tt("CCNP 350-401 ENCOR"); ?> <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet" data-bs-original-title="" title=""><i class="fa fa-info"></i></span> </li>
+                                                                    <li><i class="fa fa-check"></i> <?php echo tt("NSE4"); ?> <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet" data-bs-original-title="" title=""><i class="fa fa-info"></i></span> </li>
+                                                                    <li><i class="fa fa-check"></i> <?php echo tt("NSE7"); ?> <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet" data-bs-original-title="" title=""><i class="fa fa-info"></i></span> </li>
+                                                                    <li><i class="fa fa-check"></i> <?php echo tt("CYBERSECUTITY"); ?> <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet" data-bs-original-title="" title=""><i class="fa fa-info"></i></span> </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    <?php endif; ?>
+                                                </div>
+                                        </div>
+                                    <?php else: ?>
+                                    <?php endif; ?>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+
+                                </div>
+                    </div>
+
+                    <div class="tab-pane" id="tableau2" role="tabpanel">
+                        <div class="row mt-30">
+                            <?php $__currentLoopData = App::$subscription; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $subscriptions): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <?php if($subscriptions->getTarget()=="e"): ?>
+                                    <div class="col-md-4 col-12" style="margin-bottom: 20px;">
+                                        <div class="price-table active bg-gray-100 pull-up">
+                                            <div class="price-top bg-white">
+                                                <div class="price-title">
+                                                    <h3 class="mb-15"><?php echo e($subscriptions->getName()); ?></h3>
+                                                </div>
+                                                <div class="price-prize">
+                                                    <h2><?php echo e($subscriptions->getY_price()); ?> € / 5 <?php echo tt("Days"); ?></h2>
+                                                </div>
+                                                <div class="price-button">
+                                                    <a class="btn btn-primary" href="<?php echo e(route('cart')); ?>?id=<?php echo e($subscriptions->getId()); ?>"><?php echo tt("Get It Now"); ?></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                <?php else: ?>
+                                <?php endif; ?>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <section class="py-50 aos-init aos-animate" >
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-12 text-center">
+                    <h1 class="mb-15"><?php echo tt("Latest Blog"); ?></h1>
+                    <hr class="w-100 bg-primary">
+                </div>
+            </div>
+            <div class="row mt-30">
+                <?php $__currentLoopData = Article::all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $articles): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="col-xl-4 col-md-4 col-12">
+                    <div class="blog-post">
+                        <div class="entry-image clearfix">
+                            <img class="img-fluid" src="<?php echo e(__env); ?>uploads/article/<?php echo e($articles->getImage()); ?>" alt="">
+                        </div>
+                        <div class="blog-detail">
+                            <div class="entry-title mb-10">
+                                <a href="<?php echo e(route('blog')); ?>?id=<?php echo e($articles->getId()); ?>"><?php echo e($articles->getTitle()); ?></a>
+                            </div>
+                            <div class="entry-meta mb-10">
+                                <ul class="list-unstyled">
+                                    <div class="me-10">
+                                        <i class="fa fa-user me-5"></i> LS2EC
+                                    </div>
+                                </ul>
+                            </div>
+                            <div class="entry-content">
+                                <p><?php echo e($articles->getResume()); ?></p>
+                            </div>
+                            <div class="entry-share d-flex justify-content-between align-items-center">
+                                <div class="entry-button">
+                                    <a href="<?php echo e(route('blog')); ?>?id=<?php echo e($articles->getId()); ?>" class="btn btn-primary btn-sm"><?php echo tt('Read more'); ?></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-50 aos-init aos-animate">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-12 text-center">
+                    <h1 class="mb-15"><?php echo tt("Our Partners"); ?></h1>
+                    <hr class="w-100 bg-primary">
+                </div>
+            </div>
+            <div class="row mt-30">
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"><img src="<?php echo e(assets); ?>images/front-end-img/unilogo/uni-2.jpg" style="width: 199.833px; margin-right: 20px;"></div>
+                        <div class="col-2"><img src="<?php echo e(assets); ?>images/front-end-img/unilogo/uni-3.jpg" style="width: 199.833px; margin-right: 20px;" ></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-50 aos-init aos-animate">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-12 text-center">
+                    <h1 class="mb-15"><?php echo tt("Our Clients"); ?></h1>
+                    <hr class="w-100 bg-primary">
+                </div>
+            </div>
+            <div class="row mt-30">
+
+                <div class="col-5"></div>
+                <div class="col-2" ><img src="<?php echo e(assets); ?>images/front-end-img/unilogo/uni-1.jpg" style="width: 199.833px; margin-right: 20px;"></div>
+                <div class="col-2"></div>
+
+            </div>
+        </div>
+    </section>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\ls2ec\web\views/home.blade.php ENDPATH**/ ?>

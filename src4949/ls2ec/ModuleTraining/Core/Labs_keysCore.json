@@ -1,0 +1,1 @@
+{"name":"labs_keys","attribut":{"1":{"name":"login","datatype":"string","size":"255","nullable":"not","formtype":"text"},"2":{"name":"password","datatype":"string","size":"255","nullable":"not","formtype":"text"}},"relation":[]}

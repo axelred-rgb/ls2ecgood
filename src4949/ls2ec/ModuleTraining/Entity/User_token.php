@@ -1,0 +1,108 @@
+<?php 
+        // user \dclass\devups\model\Model;
+    /**
+     * @Entity @Table(name="user_token")
+     * */
+    class User_token extends Model implements JsonSerializable{
+
+        /**
+         * @Id @GeneratedValue @Column(type="integer")
+         * @var int
+         * */
+        protected $id;
+        /**
+         * @Column(name="date", type="datetime"  , nullable=true)
+         * @var datetime
+         **/
+        protected $date;
+        /**
+         * @Column(name="quantite", type="integer"  )
+         * @var integer
+         **/
+        protected $quantite; 
+        
+        /**
+         * @ManyToOne(targetEntity="\User")
+         * @var \User
+         */
+        public $user;
+
+        /**
+         * @ManyToOne(targetEntity="\Packtokken")
+         * @var \Packtokken
+         */
+        public $packtokken;
+
+
+        
+        public function __construct($id = null){
+            
+                if( $id ) { $this->id = $id; }   
+                          
+	$this->user = new User();
+	$this->packtokken = new Packtokken();
+}
+
+        public function getId() {
+            return $this->id;
+        }
+        public function getDate() {
+            return $this->date;
+        }
+
+        public function setDate($date) {
+            $this->date = $date;
+        }
+        
+        public function getQuantite() {
+            return $this->quantite;
+        }
+
+        public function setQuantite($quantite) {
+            $this->quantite = $quantite;
+        }
+        
+        /**
+         *  manyToOne
+         *	@return \User
+         */
+        function getUser() {
+            $this->user = $this->user->__show();
+            return $this->user;
+        }
+        function setUser(\User $user) {
+            $this->user = $user;
+        }
+
+        function setUser_id($user_id) {
+            $this->user = User::find($user_id);
+        }
+
+        function setPacktokken_id($packtokken_id) {
+            $this->packtokken = Packtokken::find($packtokken_id);
+        }
+                        
+        /**
+         *  manyToOne
+         *	@return \Packtokken
+         */
+        function getPacktokken() {
+            $this->packtokken = $this->packtokken->__show();
+            return $this->packtokken;
+        }
+        function setPacktokken(\Packtokken $packtokken) {
+            $this->packtokken = $packtokken;
+        }
+                        
+        
+        public function jsonSerialize() {
+                return [
+                    'id' => $this->id,
+                    'date' => $this->date,
+                    'quantite' => $this->quantite,
+                    'user' => $this->user,
+                    'packtokken' => $this->packtokken,
+                ];
+        }
+        
+}

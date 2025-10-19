@@ -1,0 +1,161 @@
+<?php
+
+
+namespace spacekola\ModuleUser;
+
+
+use Dvups_module;
+use Genesis as g;
+use LoginController;
+use RegistrationController;
+use Request;
+use UserController;
+use UserFrontController;
+
+class ModuleUser
+{
+
+    public $moduledata;
+
+    public function __construct()
+    {
+
+    }
+
+    public function web()
+    {
+
+        $this->moduledata = Dvups_module::init('ModuleData');
+
+
+        (new Request('layout'));
+
+        switch (Request::get('path')) {
+
+            case 'layout':
+                g::renderView("overview");
+                break;
+
+            default:
+                g::renderView('404', ['page' => Request::get('path')]);
+                break;
+        }
+    }
+
+    public function services()
+    {
+
+        (new Request('hello'));
+
+        switch (Request::get('path')) {
+
+            default:
+                g::json_encode(['success' => false, 'error' => ['message' => "404 : action note found", 'route' => R::get('path')]]);
+                break;
+        }
+    }
+
+    public function webservices()
+    {
+
+        $userCtrl = new UserFrontController();
+
+        (new Request('hello'));
+
+        switch (Request::get('path')) {
+
+            case 'user.create':
+                g::json_encode((new UserFrontController())->createWebAction());
+                break;
+            case 'registration':
+                g::json_encode((new UserFrontController())->createAction());
+                break;
+            case 'user.update':
+                g::json_encode((new UserFrontController())->updateAction(Request::get("id")));
+                break;
+            case 'user.phonelogin':
+                g::json_encode(LoginController::phoneconnexionAction());
+                break;
+            case 'user.login':
+            case 'user.authentification':
+                g::json_encode(LoginController::connexionAction());
+                break;
+            case 'user.initresetpassword':
+                g::json_encode(LoginController::resetactivationcode());
+                break;
+            case 'user.resetpassword':
+                g::json_encode(LoginController::resetpassword());
+                break;
+            case 'user.newresetpassword':
+                g::json_encode(LoginController::newresetpassword());
+                break;
+            case 'user.changeemail':
+                g::json_encode(RegistrationController::changeemailAction());
+                break;
+            case 'user.provideemail':
+                g::json_encode(RegistrationController::provideemailAction());
+                break;
+            case 'user.changetelephone':
+                g::json_encode(RegistrationController::changetelephoneAction());
+                break;
+            case 'user.changepassword':
+                //isnotconnected();
+                g::json_encode(LoginController::changepwAction());
+                break;
+            case 'user.upgradepassword':
+                //isnotconnected();
+                g::json_encode(LoginController::upgradepwAction());
+                break;
+            case 'user.activateaccount':
+                g::json_encode(RegistrationController::activateaccount());
+                break;
+            case 'resentactivationcode':
+                g::json_encode(RegistrationController::resendactivationcode());
+                break;
+            case 'user.checkmail':
+                g::json_encode(RegistrationController::checkmailAction());
+                break;
+            case 'user.updateimageprofile':
+                g::json_encode(UserController::updateimageprofileAction(R::get("id")));
+                break;
+            case 'user.resetaccount':
+                g::json_encode(RegistrationController::resetaccount());
+                break;
+
+            case 'user.downloadpart':
+                g::json_encode(UserFrontController::downloadpartAction());
+                break;
+
+            case 'user.downloadent':
+                g::json_encode(UserFrontController::downloadentAction());
+                break;
+
+            case 'user.contactus':
+                g::json_encode(UserFrontController::contactusAction());
+                break;
+
+            case 'user.newsletter':
+                g::json_encode(UserFrontController::newsletterAction());
+                break;
+
+            case 'user.updatetoken':
+                g::json_encode((new UserFrontController())->updateToken());
+                break;
+
+            case 'enabledisable.user':
+                g::json_encode((new UserFrontController())->enabledisableUser());
+                break;
+            case 'user.postupdate':
+                g::json_encode((new UserFrontController())->postupdateAction());
+                break;
+            case 'updatephone.orcountrystep1':
+                g::json_encode((new UserFrontController())->updatephonenumber());
+                break;
+            case 'updatephone.orcountrystep2':
+                g::json_encode((new UserFrontController())->updatephonenumber1());
+                break;
+
+        }
+    }
+
+}

@@ -1,0 +1,1 @@
+{"name":"paiement","attribut":{"1":{"name":"motif","datatype":"string","size":"255","nullable":"not","formtype":"text"},"2":{"name":"montant","datatype":"string","size":"255","nullable":"not","formtype":"text"}},"relation":[]}
